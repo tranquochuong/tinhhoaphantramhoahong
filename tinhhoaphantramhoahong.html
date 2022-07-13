@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <table>
+            <input type="number" id="hoahong" placeholder="Nhập doanh số">
+            <button onclick="check()">check</button>
+            <h3>Số tiền hoa hồng được nhận:</h3>
+            <div id="result"> Số tiền</div>
+        </table>
+        <script>
+            function check(){
+                let a= document.getElementById("hoahong").value;
+                let result= (a*9)/100;
+                document.getElementById("result").innerHTML= result + "VNĐ";
+            }
+        </script>
+    </table>
+</body>
+</html>
