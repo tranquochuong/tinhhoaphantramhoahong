@@ -12,13 +12,24 @@
             <input type="number" id="hoahong" placeholder="Nhập doanh số">
             <button onclick="check()">check</button>
             <h3>Số tiền hoa hồng được nhận:</h3>
-            <div id="result"> Số tiền</div>
+            <div id="result">Số tiền</div>
         </table>
         <script>
             function check(){
                 let a= document.getElementById("hoahong").value;
-                let result= (a*9)/100;
-                document.getElementById("result").innerHTML= result + "VNĐ";
+                if( a < 500000)
+                {
+                    result= (a*5)/100;
+                }else if(a<800000)
+                {
+                    result= (a*10)/100;
+                }
+                else( a>= 800000)
+                {
+                    result= (a*15)/100;
+                }
+                    
+                document.getElementById("result").innerHTML= result +""+ "VNĐ";
             }
         </script>
     </table>
